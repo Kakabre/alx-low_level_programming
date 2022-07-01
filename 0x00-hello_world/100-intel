@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S CFILE.c -masm=Intel -o CFILE
+gcc CFILE -S -masm=intel -o CFILE

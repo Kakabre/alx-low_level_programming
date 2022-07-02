@@ -1,31 +1,38 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
-/** 
-  *main - writes 00 - 99 
-  *Decription: Writes all unique combinations 
-  *Return: zero for success 
-  */ 
+/**
+ * main - Entry point
+ * Description - Alphabets
+ * Return: 0 for Success
+ */
 
-int main(void)
+int main(void)
 {
-		  int i, j; 
-		    
-		  for (i = '0'; i <= '9'; i++) 
-		  { 
-			  for (j = '0'; j <= '9'; j++) 
-			  { 
-				  if ((i < j) & (j <= '9')) 
-				  { 
-					  putchar(i); 
-					  putchar(j); 
-					  if ((j < '9') | (i < '8')) 
-					  { 
-						  putchar(',');
-						  putchar(' '); 
-					  }
-				  }
-			  }
-		  }
-		 putchar('\n');
-		return (0);
-}	
+	int i, j, k;
+
+	for (i = '0'; i <= '9'; i++)
+	{
+		for (j = '0'; j <= '9'; j++)
+		{
+			for (k = '0'; k <= '9'; k++)
+			{
+				if ((i < j) & (j < k) & (k <= '9'))
+				{
+					putchar(i);
+					putchar(j);
+					putchar(k);
+
+					if ((i + j + k) < 168)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n);
+	return (0);
+}

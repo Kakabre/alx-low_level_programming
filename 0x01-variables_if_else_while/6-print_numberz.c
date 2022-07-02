@@ -1,20 +1,22 @@
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
- * main - print 0123456789 using putchar
- * Return: Always 0 (Success)
+ *main - prints all single digit numbers of base 10 starting from 0
+ *followed by a new line
+ *
+ *Return: Always 0
  */
 
 int main(void)
 {
-	int n = '0';
+	int ch;
 
-	while (n <= '9')
+	for (ch = 48; ch <= 57; ch++)
 	{
-		putchar(n);
-		n++;
+		putchar(ch);
 	}
-	putchar('\n')
+	putchar(10);
 
-		return (0);
+	return (0);
 }

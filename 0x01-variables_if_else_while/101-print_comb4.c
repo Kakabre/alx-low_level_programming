@@ -1,34 +1,31 @@
 #include <stdio.h>
 
-/**
- * main - print all combinations of three different digits
- * Return: Always 0 (Success)
- */
+/** 
+  *main - writes 00 - 99 
+  *Decription: Writes all unique combinations 
+  *Return: zero for success 
+  */ 
 
-int main(void)
+int main(void)
 {
-	int one;
-	int ten;
-	int hundred;
-
-	for (hundred = '0'; hundred <= '9'; hundred++) /*hundreds place*/
-	{
-		for (ten = (hundred + 1); ten <= '9'; ten++) /*tens=100s+1*/
-		{
-			for (one = (ten + 1); one <= '9'; one++) /*ones*/
-			{
-				putchar(hundred);
-				putchar(ten);
-				putchar(one);
-				if (hundred != '7' || ten != '8' || one != '9')
-				{
-					putchar(',');
-					putchar('');
-				}
-			}
-		}
-	}
-	putchar('\n')
-
+		  int i, j; 
+		    
+		  for (i = '0'; i <= '9'; i++) 
+		  { 
+			  for (j = '0'; j <= '9'; j++) 
+			  { 
+				  if ((i < j) & (j <= '9')) 
+				  { 
+					  putchar(i); 
+					  putchar(j); 
+					  if ((j < '9') | (i < '8')) 
+					  { 
+						  putchar(',');
+						  putchar(' '); 
+					  }
+				  }
+			  }
+		  }
+		 putchar('\n');
 		return (0);
-}
+}	

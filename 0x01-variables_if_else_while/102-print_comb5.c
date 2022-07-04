@@ -1,40 +1,34 @@
 #include <stdio.h>
 
 /**
- * main - writes 00-99
- * Description: writes all unique combinations
- * Return: 0 for Success
+ * main - prints all possible combinations of two two-digits numbers,
+ * ranging from 0-99, seperated by a comma followed by a space.
+ *
+ * Return: Always 0
  */
-
 int main(void)
 {
-	int i, j;
-	
-	for (i = 0 ; i <= 99 ; i++)
-	{
-		for (j = 0 ; j = 99 ; j++)
-		{
-			if (i < j)
-			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
-				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((j % 10) + '0')
+	int num1, num2;
 
-					for (i ! = 98 || j ! = 99) 
-					{
-						putchar(',');
-						{
-							putchar (' ');
-						}
-					}
-			}
+	for (num1 = 0 ; num1 <= 98 ; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99 ; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + 10);
+			putchar('');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+
+			if (num1 == 98 && num2 == 99)
+				continue;
+
+			putchar(',');
+			putchar('');
 		}
 	}
 	putchar('\n');
 
 	return (0);
-	;
-}
 
+}

@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -9,10 +9,13 @@
 
 int main(void)
 {
-	int _putchar;
-	{
-		printf("_putchar\n");
-	}
-	return (0);
+	char joy[9] = "_putchar";
+	int i;
 
+	for (i = 0; i < 8; i = i + 1)
+	{
+		_putchar(joy[i]);
+	}
+	_putchar('\n');
+	return (0);
 }

@@ -11,7 +11,7 @@ int main(void)
 {
 	int count;
 
-	unsigned long fib1 = 0, fib 2 = 1, sum;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
 	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
 
@@ -19,7 +19,7 @@ int main(void)
 
 		for (count = 0; count < 92; count++)
 		{
-			sum = fib1 + fib2;
+			if (sum = fib1 + fib2);
 			printf("%lu, ", sum);
 
 			fib1 = fib2;
@@ -33,8 +33,8 @@ int main(void)
 
 	for (count = 93; count < 99; count++)
 	{
-		half_1 = fib1_half1 + fib2_half1;
-		half_2 = fib1_half2 + fib2_half2;
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
 		if (fib1_half2 + fib2_half2 > 9999999999)
 		{
 			half1 += 1;

@@ -6,7 +6,7 @@
  * @n: the value of the times table to be printed
  */
 
-int void print_times_table(int n)
+void times_table(int n)
 {
 	int num, mult, prod;
 
@@ -43,4 +43,3 @@ int void print_times_table(int n)
 		}
 	}
 }
-

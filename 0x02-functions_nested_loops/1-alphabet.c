@@ -2,6 +2,8 @@
 
 /**
  * main - Prints the alphabets in lowercase
+ * followed by a new line
+ * you can only use _putchar twice
  *
  * Return: 0 (success)
  */

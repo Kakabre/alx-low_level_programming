@@ -1,13 +1,8 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_most_numbers - prints 0-9
- * Excluding 2 and 4
- *
- * _putchar is used twice
- *
- * Return: void
+ * print_most_numbers - prints numbers 0 to 9 without 2 and 4
+ * followed by a new line
  */
 
 void print_most_numbers(void)

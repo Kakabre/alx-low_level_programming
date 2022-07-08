@@ -12,28 +12,17 @@
 
 int main(void)
 {
-	long int n;
+	int c;
+	long num = 612852475143;
 
-	n = 612852475143;
-
-	long int div = 2, ans = 0, maxFact;
-	while (n != 0)
-
+	for (c = (int) sqrt(num); c > 2; c++)
 	{
-		if (n % div != 0)
-			div = div + 1;
-		else
+		if (num % c == 0)
 		{
-			maxFact = n;
-			n = n / div;
-
-			if (n == 1)
-			{
-				printf("%d is the largest prime factor !\n", maxFact);
-				ans = 1;
-				break;
-			}
+			printf("%d\n", c);
+			break;
 		}
 	}
+
 	return (0);
 }

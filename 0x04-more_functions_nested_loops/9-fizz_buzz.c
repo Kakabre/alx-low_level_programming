@@ -13,9 +13,8 @@ int main(void)
 	int i;
 	char fizz[] = "Fizz";
 	char buzz[] = "Buzz";
-	char fizzbuzz[] = "FizzBuzz";
 
-	for (i = 1; i <= 100, i++)
+	for (i = 1; i <= 100; i++)
 	{
 
 		if (i % 3 == 0 && i % 5 == 0)

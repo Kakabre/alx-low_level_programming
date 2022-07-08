@@ -6,19 +6,21 @@
  */
 
 void more_numbers(void)
-{7
-	int i;
-	int j;
+{
+	int a, b, c;/* a = num, b = row, c = tens */
 
-	for (i = 0; i < 9; i++)
+	for (b = 0; b <= 9; b++)
 	{
-		for (j = 0; j < 15; j++)
+		for (a = 0; a < 15; a++)
 		{
-			if (j > 9)
-				_putchar(j / 10 + '0');
-
-			_putchar(j % 10 + '0');
+			if (a > 9)
+			{
+				c = a / 10;
+				_putchar(c + '0');
+			}
+			_putchar(a % 10 + '0');
 		}
 		_putchar('\n');
 	}
 }
+

@@ -38,7 +38,7 @@ void print_number(int n)
 		while (b > 0)
 		{
 			m = z / b;
-			z = z / b;
+			z = z % b;
 			_putchar (m + '0');
 			b = b / 10;
 		}

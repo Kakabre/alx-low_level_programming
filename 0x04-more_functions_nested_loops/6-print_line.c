@@ -2,14 +2,14 @@
 
 /**
  * print_line - writes a line n times
- * followed by a new line
+ * @n: line
  *
  * using _putchar function
  *
  * Return: void
  */
 
-void print_line(void)
+void print_line(int n)
 {
 	int i = 0;
 

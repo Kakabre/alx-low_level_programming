@@ -11,7 +11,7 @@ void print_rev(char *s)
 
 	while (i >= 0)
 	{
-		if (s[i] != '\0')
+		if (s[i] == '\0')
 			break;
 		i++;
 	}
@@ -19,7 +19,7 @@ void print_rev(char *s)
 	for (i--; i >= 0; i--)
 
 	{
-		_putchar(s[i--]);
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }

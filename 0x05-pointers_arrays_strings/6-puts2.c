@@ -7,7 +7,6 @@
  * @str: string to be printed
  *
  */
-
 void puts2(char *str)
 {
 	int abcd = 0;

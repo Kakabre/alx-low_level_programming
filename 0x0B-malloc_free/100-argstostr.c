@@ -24,7 +24,12 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			ar[count] = av[i][j];
 			count++;
+		}
+		ar[count] ='\n';
+		count++;
 	}
 
 	count++;/**to account for \n that would be added later*/

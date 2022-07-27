@@ -14,18 +14,20 @@ char *str_concat(char *s1, char *s2)
 	int string, concat_string = 0, zen = 0;
 
 	{
+		if (s1 == NULL)
+			s1 = "";
+
 		if (s2 == NULL)
-			s2 = " ";
+			s2 = "";
 
 		for (string = 0; s1[string] || s2[string]; string++)
 			zen++;
 	}
-
-	{
 		hero = malloc(sizeof(char) * zen);
+
 		if (hero == NULL)
 			return (NULL);
-	}
+
 	{
 		for (string = 0; s1[string]; string++)
 			hero[concat_string++] = s1[string];

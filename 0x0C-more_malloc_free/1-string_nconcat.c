@@ -28,11 +28,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (b = 0; s2[b] != '\0'; b++)
 		;
-	if (n > b)
-		n = b;
+	if (b > n)
+		b = n;
 
 	c = a + n;
-	boa = malloc(c + 1);
+	boa = malloc(char) * (c + 1);
 
 	if (boa == NULL)
 		return (NULL);

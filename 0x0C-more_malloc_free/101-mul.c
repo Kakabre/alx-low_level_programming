@@ -14,11 +14,12 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
  *
  * Return: The length of the string.
  */
+
 int find_len(char *str)
 {
 	int len = 0;
 
-	while (*str++)
+	while (*(str + len) != '\0')
 		len++;
 
 	return (len);
@@ -26,13 +27,14 @@ int find_len(char *str)
 
 /**
  * create_xarray - Creates an array of chars and initializes it with
- *                 the character 'x'. Adds a terminating null byte.
+ * the character 'x'. Adds a terminating null byte.
  * @size: The size of the array to be initialized.
  *
  * Description: If there is insufficient space, the
- *              function exits with a status of 98.
+ * function exits with a status of 98.
  * Return: A pointer to the array.
  */
+
 char *create_xarray(int size)
 {
 	char *array;
@@ -53,11 +55,12 @@ char *create_xarray(int size)
 
 /**
  * iterate_zeroes - Iterates through a string of numbers containing
- *                  leading zeroes until it hits a non-zero number.
+ * leading zeroes until it hits a non-zero number.
  * @str: The string of numbers to be iterate through.
  *
  * Return: A pointer to the next non-zero element.
  */
+
 char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
@@ -71,9 +74,10 @@ char *iterate_zeroes(char *str)
  * @c: The character to be converted.
  *
  * Description: If c is a non-digit, the function
- *              exits with a status of 98.
+ * exits with a status of 98.
  * Return: The converted int.
  */
+
 int get_digit(char c)
 {
 	int digit = c - '0';

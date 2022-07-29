@@ -5,6 +5,7 @@
 int find_len(char *str);
 char *create_xarray(int size);
 char *iterate_zeroes(char *str);
+int _isdigit(int c);
 void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
@@ -70,25 +71,22 @@ char *iterate_zeroes(char *str)
 }
 
 /**
- * get_digit - Converts a digit character to a corresponding int.
- * @c: The character to be converted.
+ * _isdigit - checks if a character is a digit
+ * @c: The character to be checked.
  *
  * Description: If c is a non-digit, the function
  * exits with a status of 98.
- * Return: The converted int.
+ * Return: 1.
  */
 
-int get_digit(char c)
+int _isdigit(int c)
 {
-	int digit = c - '0';
-
-	if (digit < 0 || digit > 9)
-	{
+	if (c != '0' && c != '9')
 		printf("Error\n");
-		exit(98);
-	}
+	exit(98);
 
-	return (digit);
+	if (c >= '0' && c <= '9')
+		return (1);
 }
 
 /**
@@ -218,7 +216,7 @@ int main(int argc, char *argv[])
 
 	for (index = find_len(argv[2]) - 1; index >= 0; index--)
 	{
-		digit = get_digit(*(argv[2] + index));
+		digit = _isdigit(*(argv[2] + index));
 		get_prod(next_prod, argv[1], digit, zeroes++);
 		add_nums(final_prod, next_prod, size - 1);
 	}

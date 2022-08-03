@@ -25,11 +25,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	op = (*get_op_func)(argv[2]);
 
-	if (op == NULL)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	if ((*op == '/' && num2 == 0) || ((*op == '%' && num 2 == 0)
+				{
+				printf("Error\n");
+				exit(100);
+				}
 
 	calc = (*op)(num1, num2);
 	printf("%d\n", calc);

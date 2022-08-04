@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
@@ -42,7 +43,7 @@ void print_all(const char * const format, ...)
 					if (str == NULL)
 					str = ("(nil)");
 				}
-				printf("%s", va_arg(ap, char *);
+				printf("%s", str);
 				break;
 			default:
 				break;

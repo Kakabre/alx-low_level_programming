@@ -40,9 +40,9 @@ void print_all(const char * const format, ...)
 				str = va_arg(ap, char *);
 				{
 					if (str == NULL)
-					printf("(nil)");
+					str = ("(nil)");
 				}
-				printf("%s", str);
+				printf("%s", va_arg(ap, char *);
 				break;
 			default:
 				break;

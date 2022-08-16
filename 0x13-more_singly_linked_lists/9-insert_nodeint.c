@@ -1,49 +1,45 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - inserts a new node at a given position
- * @head: double pointer to the head of the listint_t linked list
- * @idx: the index of the list where the new node should be added
- * @n: element/property n of the node to be added
- * Return: address of the new element (SUCCESS), or
- * NULL if it failed (FAILURE), or
- * NULL if is not possible to add the new node at index @idx
+ * insert_nodeint_at_index - Inserts a new node to a listint_t
+ *                           list at a given position.
+ * @head: A pointer to the address of the
+ *        head of the listint_t list.
+ * @idx: The index of the listint_t list where the new
+ *       node should be added - indices start at 0.
+ * @n: The integer for the new node to contain.
+ *
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new node.
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int i = 0;
-	listint_t *current_node = *head, *new_node_ptr;
+	listint_t *new, *copy = *head;
+	unsigned int node;
+
+	new = malloc(sizeof(listint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
 
 	if (idx == 0)
 	{
-		new_node_ptr = malloc(sizeof(listint_t));
-
-		if (!new_node_ptr)
-			return (NULL);
-		new_node_ptr->n = n;
-		new_node_ptr->next = *head;
-		*head = new_node_ptr;
-		return (new_node_ptr);
+		new->next = copy;
+		*head = new;
+		return (new);
 	}
 
-	while (current_node && ((i + 1) != idx))
+	for (node = 0; node < (idx - 1); node++)
 	{
-		current_node = current_node->next;
-		i++;
-	}
-
-	if ((i + 1) == idx)
-	{
-		new_node_ptr = malloc(sizeof(listint_t));
-
-		if (!new_node_ptr)
+		if (copy == NULL || copy->next == NULL)
 			return (NULL);
-		new_node_ptr->n = n;
-		new_node_ptr->next = current_node->next;
-		current_node->next = new_node_ptr;
-		return (new_node_ptr);
+
+		copy = copy->next;
 	}
-	return (NULL);
+
+	new->next = copy->next;
+	copy->next = new;
+
+	return (new);
 }
